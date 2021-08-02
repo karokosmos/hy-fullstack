@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Climbing is the best",
+  "author": "Adam Ondra",
+  "url": "https://ondraclimbs.com",
+  "likes": 12
+}
