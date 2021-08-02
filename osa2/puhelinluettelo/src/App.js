@@ -54,6 +54,13 @@ const App = () => {
           type: 'success'
         })
       })
+      .catch(error => {
+        const errorText = error.response.data.message
+        showNotification({
+          text: errorText,
+          type: 'error'
+        })
+      })
   }
 
   const updatePerson = (id) => {
@@ -88,6 +95,7 @@ const App = () => {
   const deletePerson = (person) => {
     if (window.confirm(`Delete ${person.name} ?`)) {
       const deleteId = person.id
+
       personService
         .deleteOne(deleteId)
         .then(_ => {
