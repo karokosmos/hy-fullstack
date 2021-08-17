@@ -1,0 +1,9 @@
+PUT http://localhost:3003/api/blogs/61098305d80a868ca5b28542
+Content-Type: application/json
+
+{
+  "title": "Food blog",
+  "author": "Cherrie Chef",
+  "url": "https://delicious.com",
+  "likes": 100
+}
