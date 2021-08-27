@@ -17,3 +17,37 @@
   background-color: lightpink;
   color: red;
 }
+
+.blog-list {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.blog {
+  display: flex;
+  background-color: #64b9d6;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  padding: 10px;
+  color: #fff;
+  align-items: center;
+}
+
+.blog-info {
+  padding-right: 20px;
+}
+
+.blog-btn {
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.blog-likes {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.blog-likes button {
+  margin-left: 5px;
+}
