@@ -18,28 +18,16 @@
   color: red;
 }
 
-.blog-list {
-  display: inline-flex;
-  flex-direction: column;
+.blog-list ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.blog {
-  display: flex;
-  background-color: #64b9d6;
-  border-radius: 2px;
-  margin-bottom: 5px;
-  padding: 10px;
-  color: #fff;
-  align-items: center;
-}
-
-.blog-info {
-  padding-right: 20px;
-}
-
-.blog-btn {
-  margin-left: auto;
-  align-self: flex-start;
+.blog-list li {
+  display: block;
+  padding: 0.5rem;
+  border: solid 1px #000;
+  margin: 3px 0px;
 }
 
 .blog-likes {
@@ -51,3 +39,20 @@
 .blog-likes button {
   margin-left: 5px;
 }
+
+/* .nav {
+  display: flex;
+}
+
+.link {
+  margin-right: 10px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user button {
+  margin-left: 10px;
+} */

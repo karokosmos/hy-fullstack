@@ -1,4 +1,5 @@
 import blogService from '../services/blogs'
+import commentService from '../services/comments'
 
 const blogReducer = (state = [], action) => {
   switch (action.type) {
@@ -18,6 +19,20 @@ const blogReducer = (state = [], action) => {
         b.id !== id ? b : updatedBlog)
       const sortedBlogs = updatedState.sort((a, b) => b.likes - a.likes)
       return sortedBlogs
+    }
+    case 'ADD_COMMENT': {
+      const blogId = action.data.blogId
+      const comment = action.data.comment
+      const blog = state.find(b => b.id === blogId)
+      console.log(blog)
+      const updatedBlog = {
+        ...blog,
+        comments: blog.comments.concat(comment)
+      }
+      console.log(updatedBlog)
+      const updatedState = state.map(b =>
+        b.id !== blogId ? b : updatedBlog)
+      return updatedState
     }
     default:
       return state
@@ -67,6 +82,20 @@ export const addLike = (id) => {
       data: {
         id,
         updatedBlog
+      }
+    })
+  }
+}
+
+export const addComment = (content, blogId) => {
+  return async dispatch => {
+    const newComment = await commentService.create(content, blogId)
+    console.log(newComment)
+    dispatch({
+      type: 'ADD_COMMENT',
+      data: {
+        comment: newComment,
+        blogId
       }
     })
   }

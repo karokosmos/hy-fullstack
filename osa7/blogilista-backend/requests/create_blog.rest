@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imthcm9rIiwiaWQiOiI2MTFhNDI4NTMwZmQwNjBlNTFkMDhlMTMiLCJpYXQiOjE2MjkxMTEyMTV9.oj_2pKgEdy4s6Whwr1YAzlfzFu_WRXa8CMFsfhydtEc
+
+{
+  "title": "Food blog",
+  "author": "Chef Johnson",
+  "url": "https://chefjohnson.com",
+  "likes": 35
+}
